@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Gym Workouts - FIT-TRACK</title>
+    <style>
+        /* ... existing styles ... */
+        .gym-exercise {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        .gym-exercise img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        .exercise-description {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="/"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <span><i class="ri-menu-line"></i></span>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="home">HOME</a></li>
+                <li class="link"><a href="about">ABOUT US</a></li>
+                <li class="dropdown">
+                  <a href="program" class="dropbtn">PROGRAM</a>
+                  <ul class="dropdown-content">
+                    <li><a href="zumbaa">Zumbba</a></li>
+                    <li><a href="cardio">Cardio</a></li>
+                    <li><a href="gym">GYM</a></li>
+                    <li><a href="yoga">Yoga</a></li>
+                    <li><a href="cali">Calisthenic</a></li>
+                    <li><a href="swim">Swimming</a></li>
+                  </ul>
+                </li>
+                <li class="link"><a href="bmi">BMI</a></li>
+                <li class="link"><a href="blog">BLOGS</a></li>
+              
+                <% if (user) { %>
+                  <li class="link"><a href="#">Welcome, <%= user.username %></a></li>
+                <% } else { %>
+                  <li class="link"><a href="auth">LOGIN</a></li>
+                  <li class="link"><a href="auth">SIGN UP</a></li>
+                <% } %>
+              
+                <li class="link"><button class="btn">CONTACT US</button></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section__container gym__container">
+            <h1 class="section__header">Gym Workouts at FIT-TRACK</h1>
+            <p class="section__description">
+                Build strength and muscle with our comprehensive gym workouts. Our experienced trainers will help you achieve your fitness goals with personalized routines.
+            </p>
+
+            <div class="gym-exercises">
+                <h2>Types of Gym Exercises</h2>
+                <p>At FIT-TRACK, we offer a variety of gym workouts to cater to different fitness levels:</p>
+                <ul>
+                    <li><strong>Weightlifting:</strong> Build muscle and strength with free weights and machines.</li>
+                    <li><strong>Bodyweight Training:</strong> Use your body weight for resistance exercises.</li>
+                    <li><strong>Cardio Machines:</strong> Improve endurance with treadmills, ellipticals, and bikes.</li>
+                    <li><strong>Functional Training:</strong> Enhance everyday movements with functional exercises.</li>
+                    <li><strong>Group Classes:</strong> Join our classes for a fun and motivating workout experience.</li>
+                </ul>
+            </div>
+
+            <div class="gym-benefits">
+                <h2>Benefits of Gym Workouts</h2>
+                <ul>
+                    <li>Increases muscle strength and endurance</li>
+                    <li>Improves overall fitness and health</li>
+                    <li>Boosts metabolism and aids in weight management</li>
+                    <li>Enhances mental health and mood</li>
+                    <li>Provides a structured environment for workouts</li>
+                </ul>
+            </div>
+
+            <div class="gym-exercises-list">
+                <h2>Basic Gym Exercises</h2>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/Squats.avif" alt="Squats">
+                    <div class="exercise-description">
+                        <h3>1. Squats</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand with feet shoulder-width apart.<br>
+                            Lower your body as if sitting back into a chair, keeping your chest up.<br>
+                            Return to standing position and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens legs, glutes, and core; improves balance and flexibility.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/Bench press.webp" alt="Bench Press">
+                    <div class="exercise-description">
+                        <h3>2. Bench Press</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Lie on a bench with feet flat on the ground.<br>
+                            Grip the barbell slightly wider than shoulder-width.<br>
+                            Lower the bar to your chest and press it back up.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Builds upper body strength, particularly in the chest, shoulders, and triceps.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/Deadlift.webp" alt="Deadlifts">
+                    <div class="exercise-description">
+                        <h3>3. Deadlifts</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand with feet hip-width apart, barbell in front.<br>
+                            Bend at the hips and knees to grip the bar.<br>
+                            Lift the bar by extending your hips and knees until standing.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens the back, glutes, and hamstrings; improves posture.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/lunges.webp" alt="Lunges">
+                    <div class="exercise-description">
+                        <h3>4. Lunges</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand tall and step forward with one leg.<br>
+                            Lower your hips until both knees are bent at about a 90-degree angle.<br>
+                            Push back to the starting position and switch legs.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens legs and glutes; improves balance and coordination.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/pull ups.jpg" alt="Pull-Ups">
+                    <div class="exercise-description">
+                        <h3>5. Pull-Ups</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Hang from a pull-up bar with palms facing away.<br>
+                            Pull your body up until your chin is above the bar.<br>
+                            Lower back down and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens the back, shoulders, and arms; improves grip strength.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/plank.jpg" alt="Plank">
+                    <div class="exercise-description">
+                        <h3>6. Plank</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Start in a push-up position with elbows under shoulders.<br>
+                            Keep your body in a straight line from head to heels.<br>
+                            Hold the position for as long as possible.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens core, shoulders, and back; improves stability.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/bicep curls.jpg" alt="Bicep Curls">
+                    <div class="exercise-description">
+                        <h3>7. Bicep Curls</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand with a dumbbell in each hand, arms at your sides.<br>
+                            Curl the weights up towards your shoulders, keeping elbows close to your body.<br>
+                            Lower back down and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens biceps; improves arm definition.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/tricep dips.jpg" alt="Tricep Dips">
+                    <div class="exercise-description">
+                        <h3>8. Tricep Dips</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Sit on the edge of a bench with hands beside you.<br>
+                            Slide off the bench and lower your body by bending your elbows.<br>
+                            Push back up to the starting position.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens triceps; improves upper body strength.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/leg press.jpg" alt="Leg Press">
+                    <div class="exercise-description">
+                        <h3>9. Leg Press</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Sit on a leg press machine with feet on the platform.<br>
+                            Push the platform away by extending your legs.<br>
+                            Slowly return to the starting position.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens legs and glutes; isolates lower body muscles.</p>
+                    </div>
+                </div>
+
+                <div class="gym-exercise">
+                    <img src="/image/assets/GYM/shoulder press.jpg" alt="Shoulder Press">
+                    <div class="exercise-description">
+                        <h3>10. Shoulder Press</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand or sit with a dumbbell in each hand at shoulder height.<br>
+                            Press the weights overhead until arms are fully extended.<br>
+                            Lower back to shoulder height and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens shoulders and triceps; improves upper body strength.</p>
+                    </div>
+                </div>
+
+                <!-- Additional gym exercises can be added here -->
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <p>
+                    Join us for an empowering gym experience that will transform your fitness journey. Get ready to lift and achieve your goals!
+                </p>
+                <div class="footer__socials">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Company</h4>
+                <div class="footer__links">
+                    <a href="#">Business</a>
+                    <a href="#">Franchise</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Network</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>About Us</h4>
+                <div class="footer__links">
+                    <a href="#">Blogs</a>
+                    <a href="#">Security</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <div class="footer__links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">BMI Calculator</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 MaharshiAndTems. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="/script/main.js"></script>
+</body>
+</html>
+

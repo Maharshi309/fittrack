@@ -1,0 +1,138 @@
+<!-- blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Our Blogs - FIT-TRACK</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+          <div class="nav__header">
+            <div class="nav__logo">
+              <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+              <span><i class="ri-menu-line"></i></span>
+            </div>
+          </div>
+          <ul class="nav__links" id="nav-links">
+            <li class="link"><a href="home">HOME</a></li>
+            <li class="link"><a href="about">ABOUT US</a></li>
+            <li class="dropdown">
+              <a href="program" class="dropbtn">PROGRAM</a>
+              <ul class="dropdown-content">
+                <li><a href="zumbaa">Zumbba</a></li>
+                <li><a href="cardio">Cardio</a></li>
+                <li><a href="gym">GYM</a></li>
+                <li><a href="yoga">Yoga</a></li>
+                <li><a href="cali">Calisthenic</a></li>
+                <li><a href="swim">Swimming</a></li>
+              </ul>
+            </li>
+            <li class="link"><a href="bmi">BMI</a></li>
+            <li class="link"><a href="blog">BLOGS</a></li>
+          
+            <% if (user) { %>
+              <li class="link"><a href="#">Welcome, <%= user.username %></a></li>
+            <% } else { %>
+              <li class="link"><a href="auth">LOGIN</a></li>
+              <li class="link"><a href="auth">SIGN UP</a></li>
+            <% } %>
+          
+            <li class="link"><button class="btn">CONTACT US</button></li>
+          </ul>
+        </nav>
+        
+      </header>
+  
+    <section class="section__container blog__container">
+        <h2 class="section__header">Our Blogs</h2>
+        <p class="section__description">
+            Welcome to our gym blog, where we share fitness tips, workout routines, and nutrition advice to help you achieve your goals. Stay tuned for expert insights, success stories, and motivation to keep you inspired on your fitness journey.
+        </p>
+        <div class="ourBlog">
+            <!-- Blog Post 1 -->
+            <div class="blogCard">
+                <img src="/image/assets/blog.jpg" alt="">
+                <div class="blogText">
+                    <h3>How To Make Abs?</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde mollitia distinctio quas.</p>
+                    <a href="https://www.insider.com/guides/health/fitness/how-to-get-abs">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="blogCard">
+                <img src="/image/assets/bl.jpg" alt="">
+                <div class="blogText">
+                    <h3>How To Make Abs?</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde mollitia distinctio quas.</p>
+                    <a href="https://www.insider.com/guides/health/fitness/how-to-get-abs">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="blogCard">
+                <img src="/image/assets/bllog.webp" alt="">
+                <div class="blogText">
+                    <h3>How To Make Abs?</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde mollitia distinctio quas.</p>
+                    <a href="https://www.insider.com/guides/health/fitness/how-to-get-abs">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <div class="footer__logo">
+              <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+            </div>
+            <p>
+              Take the first step towards a healthier, stronger you with our
+              unbeatable pricing plans. Let's sweat, achieve, and conquer
+              together!
+            </p>
+            <div class="footer__socials">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <div class="footer__links">
+              <a href="#">Business</a>
+              <a href="#">Franchise</a>
+              <a href="#">Partnership</a>
+              <a href="#">Network</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>About Us</h4>
+            <div class="footer__links">
+              <a href="#">Blogs</a>
+              <a href="#">Security</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Contact</h4>
+            <div class="footer__links">
+              <a href="#">Contact Us</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">BMI Calculator</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bar">
+          Copyright © 2024 MaharshiAndTems. All rights reserved.
+        </div>
+      </footer>
+  
+    <script src="/script/main.js"></script>
+</body>
+</html>

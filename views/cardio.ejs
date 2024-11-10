@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Cardio - FIT-TRACK</title>
+    <style>
+        .cardio-types, .cardio-benefits {
+            margin-top: 2rem;
+        }
+        .cardio-types ul, .cardio-benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cardio-types li, .cardio-benefits li {
+            margin-bottom: 1rem;
+        }
+        .cardio-exercise {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        .cardio-exercise img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        .exercise-description {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="/"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <span><i class="ri-menu-line"></i></span>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="home">HOME</a></li>
+                <li class="link"><a href="about">ABOUT US</a></li>
+                <li class="dropdown">
+                  <a href="program" class="dropbtn">PROGRAM</a>
+                  <ul class="dropdown-content">
+                    <li><a href="zumbaa">Zumbba</a></li>
+                    <li><a href="cardio">Cardio</a></li>
+                    <li><a href="gym">GYM</a></li>
+                    <li><a href="yoga">Yoga</a></li>
+                    <li><a href="cali">Calisthenic</a></li>
+                    <li><a href="swim">Swimming</a></li>
+                  </ul>
+                </li>
+                <li class="link"><a href="bmi">BMI</a></li>
+                <li class="link"><a href="blog">BLOGS</a></li>
+              
+                <% if (user) { %>
+                  <li class="link"><a href="#">Welcome, <%= user.username %></a></li>
+                <% } else { %>
+                  <li class="link"><a href="auth">LOGIN</a></li>
+                  <li class="link"><a href="auth">SIGN UP</a></li>
+                <% } %>
+              
+                <li class="link"><button class="btn">CONTACT US</button></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section__container cardio__container">
+            <h1 class="section__header">Cardio at FIT-TRACK</h1>
+            <p class="section__description">
+                Boost your heart health and endurance with our diverse cardio classes. Our expert trainers will guide you through high-energy workouts designed to improve your fitness levels.
+            </p>
+
+            <div class="cardio-types">
+                <h2>Types of Cardio Classes</h2>
+                <p>At FIT-TRACK, we offer various cardio styles to cater to different needs and preferences:</p>
+                <ul>
+                    <li><strong>HIIT:</strong> High-Intensity Interval Training for maximum calorie burn.</li>
+                    <li><strong>Spin:</strong> Indoor cycling classes for a great leg workout.</li>
+                    <li><strong>Running:</strong> Group runs for all levels, from beginners to advanced.</li>
+                    <li><strong>Aerobics:</strong> Fun dance-based workouts to get your heart pumping.</li>
+                    <li><strong>Kickboxing:</strong> A high-energy workout combining martial arts and cardio.</li>
+                </ul>
+            </div>
+
+            <div class="cardio-benefits">
+                <h2>Benefits of Cardio</h2>
+                <ul>
+                    <li>Improves cardiovascular health</li>
+                    <li>Burns calories and aids in weight loss</li>
+                    <li>Boosts mood and reduces stress</li>
+                    <li>Enhances endurance and stamina</li>
+                    <li>Improves sleep quality</li>
+                </ul>
+            </div>
+
+            < class="cardio-exercises">
+                <h2>Basic Cardio Exercises</h2>
+                
+                <div class="cardio-exercise">
+                    <img src="/image/assets/CARDIO/jumping jack.jpg" alt="Jumping Jacks">
+                    <div class="exercise-description">
+                        <h3>1. Jumping Jacks</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Stand with your feet together and arms at your sides.<br>
+                            2. Jump up, spreading your legs and raising your arms overhead.<br>
+                            3. Jump back to the starting position and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Great full-body workout that increases heart rate.</p>
+                    </div>
+                </div>
+
+                <div class="cardio-exercise">
+                    <img src="/image/assets/CARDIO/burpees.jpeg" alt="Burpees">
+                    <div class="exercise-description">
+                        <h3>2. Burpees</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Start in a standing position.<br>
+                            2. Drop into a squat and place your hands on the ground.<br>
+                            3. Kick your feet back into a plank position.<br>
+                            4. Return to squat and jump up explosively.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Full-body exercise that builds strength and endurance.</p>
+                    </div>
+                </div>
+                
+                <!-- Existing cardio exercises -->
+                <div class="cardio-exercise">
+                    <img src="/image/assets/CARDIO/jump rope.jpg" alt="Jump Rope">
+                    <div class="exercise-description">
+                        <h3>3. Jump Rope</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Hold the handles of a jump rope and stand with feet hip-width apart.<br>
+                            Swing the rope overhead and jump as it passes under your feet.<br>
+                            Land lightly on your toes and keep a slight bend in your knees.<br>
+                            Repeat for several minutes.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Improves cardiovascular endurance, burns calories, strengthens legs and calves.</p>
+                    </div>
+                </div>
+
+                <div class="cardio-exercise">
+                    <img src="/image/assets/CARDIO/high knees.jpg" alt="High Knees">
+                    <div class="exercise-description">
+                        <h3>4. High Knees</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand tall and lift one knee toward your chest.<br>
+                            Quickly switch to the other knee, moving in a running motion.<br>
+                            Keep your arms pumping and core engaged.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Boosts heart rate, improves coordination, strengthens legs and core.</p>
+                    </div>
+                </div>
+
+                <div class="cardio-exercise">
+                    <img src="/image/assets/CARDIO/butt kicks.jpeg" alt="Butt Kicks">
+                    <div class="exercise-description">
+                        <h3>5. Butt Kicks</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand with feet hip-width apart.<br>
+                            Jog in place, kicking your heels up toward your glutes.<br>
+                            Engage your core and keep an upright posture.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens hamstrings, improves cardiovascular health, increases agility.</p>
+                    </div>
+                </div>
+
+                
+                
+                <!-- Additional cardio exercises can be added here -->
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <p>
+                    Join us for an exhilarating cardio experience that will elevate your fitness journey. Get ready to sweat and have fun!
+                </p>
+                <div class="footer__socials">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Company</h4>
+                <div class="footer__links">
+                    <a href="#">Business</a>
+                    <a href="#">Franchise</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Network</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>About Us</h4>
+                <div class="footer__links">
+                    <a href="#">Blogs</a>
+                    <a href="#">Security</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <div class="footer__links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">BMI Calculator</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 MaharshiAndTems. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="/script/main.js"></script>
+</body>
+</html>

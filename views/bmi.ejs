@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/bmi.css" />
+    <title>BMI Calculator - FIT-TRACK</title>
+</head>
+<body>
+    <header class="header">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="/"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+          <ul class="nav__links" id="nav-links">
+            <li class="link"><a href="home">HOME</a></li>
+            <li class="link"><a href="about">ABOUT US</a></li>
+            <li class="dropdown">
+              <a href="program" class="dropbtn">PROGRAM</a>
+              <ul class="dropdown-content">
+                <li><a href="zumbaa">Zumbba</a></li>
+                <li><a href="cardio">Cardio</a></li>
+                <li><a href="gym">GYM</a></li>
+                <li><a href="yoga">Yoga</a></li>
+                <li><a href="cali">Calisthenic</a></li>
+                <li><a href="swim">Swimming</a></li>
+              </ul>
+            </li>
+            <li class="link"><a href="bmi">BMI</a></li>
+            <li class="link"><a href="blog">BLOGS</a></li>
+          
+            <% if (user) { %>
+              <li class="link"><a href="#">Welcome, <%= user.username %></a></li>
+            <% } else { %>
+              <li class="link"><a href="auth">LOGIN</a></li>
+              <li class="link"><a href="auth">SIGN UP</a></li>
+            <% } %>
+          
+            <li class="link"><button class="btn">CONTACT US</button></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main class="section__container">
+        <h1 class="section__header">BMI Calculator</h1>
+        <p class="section__description">Calculate your Body Mass Index (BMI) to get an idea of your body composition.</p>
+        
+        <div class="bmi-calculator">
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter weight in kg" />
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter height in cm" />
+            </div>
+            <button onclick="calculateBMI()" class="btn">Calculate BMI</button>
+            <div id="result" class="result"></div>
+        </div>
+
+        <section class="bmi-info">
+            <h2>Understanding BMI</h2>
+            <p>BMI is a simple way to gauge whether you're at a healthy weight. Here's what the numbers mean:</p>
+            <ul>
+                <li><strong>Below 18.5:</strong> Underweight</li>
+                <li><strong>18.5 - 24.9:</strong> Normal weight</li>
+                <li><strong>25 - 29.9:</strong> Overweight</li>
+                <li><strong>30 or greater:</strong> Obese</li>
+            </ul>
+            <p>Remember, BMI is just one measure of health. Consult with a healthcare professional for a comprehensive health assessment.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+          </div>
+          <p>
+            Take the first step towards a healthier, stronger you with our
+            unbeatable pricing plans. Let's sweat, achieve, and conquer
+            together!
+          </p>
+          <div class="footer__socials">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <div class="footer__links">
+            <a href="#">Business</a>
+            <a href="#">Franchise</a>
+            <a href="#">Partnership</a>
+            <a href="#">Network</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>About Us</h4>
+          <div class="footer__links">
+            <a href="#">Blogs</a>
+            <a href="#">Security</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">BMI Calculator</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 MaharshiAndTems. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script/main.js"></script>
+    <script src="/script/bmi.js"></script>
+</body>
+</html>

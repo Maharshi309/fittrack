@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Calisthenics - FIT-TRACK</title>
+    <style>
+        /* ... existing styles ... */
+        .cali-types, .cali-benefits {
+            margin-top: 2rem;
+        }
+        .cali-types ul, .cali-benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cali-types li, .cali-benefits li {
+            margin-bottom: 1rem;
+        }
+        .cali-exercise {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .cali-exercise img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        .exercise-description {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="/"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <span><i class="ri-menu-line"></i></span>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="home">HOME</a></li>
+                <li class="link"><a href="about">ABOUT US</a></li>
+                <a href="program" class="dropbtn">PROGRAM</a>
+                  <ul class="dropdown-content">
+                    <li><a href="zumbaa">Zumbba</a></li>
+                    <li><a href="cardio">Cardio</a></li>
+                    <li><a href="gym">GYM</a></li>
+                    <li><a href="yoga">Yoga</a></li>
+                    <li><a href="cali">Calisthenic</a></li>
+                    <li><a href="swim">Swimming</a></li>
+                <li class="link"><a href="blog">BLOGS</a></li>
+                <li class="link"><button class="btn">CONTACT US</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section__container cali__container">
+            <h1 class="section__header">Calisthenics at FIT-TRACK</h1>
+            <p class="section__description">
+                Build strength and flexibility using your body weight with our calisthenics workouts. Perfect for all fitness levels!
+            </p>
+
+            <div class="cali-exercises">
+                <h2>Types of Calisthenics Exercises</h2>
+                <p>At FIT-TRACK, we offer a variety of calisthenics workouts:</p>
+                <ul>
+                    <li><strong>Push-Ups:</strong> Great for upper body strength.</li>
+                    <li><strong>Pull-Ups:</strong> Excellent for back and arm development.</li>
+                    <li><strong>Squats:</strong> Builds leg strength and endurance.</li>
+                    <li><strong>Planks:</strong> Core stability and strength.</li>
+                    <li><strong>Burpees:</strong> Full-body conditioning exercise.</li>
+                </ul>
+            </div>
+
+            <div class="cali-benefits">
+                <h2>Benefits of Calisthenics</h2>
+                <ul>
+                    <li>Improves strength and flexibility</li>
+                    <li>Enhances body control and coordination</li>
+                    <li>Can be done anywhere, no equipment needed</li>
+                    <li>Promotes functional fitness</li>
+                    <li>Reduces the risk of injury</li>
+                </ul>
+            </div>
+
+            <div class="cali-exercises-list">
+                <h2>Basic Calisthenics Exercises</h2>
+
+                <div class="cali-exercise">
+                    <img src="/image/assets/CALISTHENICS/push up.jpg" alt="Push-Ups">
+                    <div class="exercise-description">
+                        <h3>1. Push-Ups</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Start in a plank position with hands shoulder-width apart.<br>
+                            Lower your body until your chest nearly touches the floor.<br>
+                            Push back up to the starting position.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens chest, shoulders, and triceps.</p>
+                    </div>
+                </div>
+
+                <div class="cali-exercise">
+                    <img src="/image/assets/CALISTHENICS/pull up.jpg" alt="Pull-Ups">
+                    <div class="exercise-description">
+                        <h3>2. Pull-Ups</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Hang from a pull-up bar with palms facing away.<br>
+                            Pull your body up until your chin is above the bar.<br>
+                            Lower back down and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens back, shoulders, and arms.</p>
+                    </div>
+                </div>
+
+                <div class="cali-exercise">
+                    <img src="/image/assets/CALISTHENICS/squat.jpg" alt="Squats">
+                    <div class="exercise-description">
+                        <h3>3. Squats</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Stand with feet shoulder-width apart.<br>
+                            Lower your body as if sitting back into a chair.<br>
+                            Return to standing position and repeat.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens legs and glutes; improves balance.</p>
+                    </div>
+                </div>
+
+                <div class="cali-exercise">
+                    <img src="/image/assets/CALISTHENICS/plank.jpg" alt="Plank">
+                    <div class="exercise-description">
+                        <h3>4. Plank</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Start in a push-up position with elbows under shoulders.<br>
+                            Keep your body in a straight line from head to heels.<br>
+                            Hold the position for as long as possible.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens core, shoulders, and back.</p>
+                    </div>
+                </div>
+
+                <div class="cali-exercise">
+                    <img src="/image/assets/CALISTHENICS/burpees.jpg" alt="Burpees">
+                    <div class="exercise-description">
+                        <h3>5. Burpees</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            Start in a standing position.<br>
+                            Drop into a squat, place hands on the ground, and jump your feet back to plank.<br>
+                            Do a push-up, then jump feet back toward hands and stand up.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Full-body workout; boosts cardio fitness.</p>
+                    </div>
+                </div>
+
+                <!-- Additional calisthenics exercises can be added here -->
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <p>
+                    Join us for an empowering calisthenics experience that will enhance your strength and flexibility. Get ready to move!
+                </p>
+                <div class="footer__socials">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Company</h4>
+                <div class="footer__links">
+                    <a href="#">Business</a>
+                    <a href="#">Franchise</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Network</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>About Us</h4>
+                <div class="footer__links">
+                    <a href="#">Blogs</a>
+                    <a href="#">Security</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <div class="footer__links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">BMI Calculator</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 MaharshiAndTems. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="/script/main.js"></script>
+</body>
+</html> 

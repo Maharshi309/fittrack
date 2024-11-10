@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Yoga - FIT-TRACK</title>
+    <style>
+        .yoga-types, .yoga-benefits {
+            margin-top: 2rem;
+        }
+        .yoga-types ul, .yoga-benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .yoga-types li, .yoga-benefits li {
+            margin-bottom: 1rem;
+        }
+        .yoga-pose {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        .yoga-pose img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        .pose-description {
+            flex: 1;
+        }
+        .pose-description img{
+            width: 200%;
+            height: 200%;
+            object-fit: cover;
+
+
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <span><i class="ri-menu-line"></i></span>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="home">HOME</a></li>
+                <li class="link"><a href="about">ABOUT US</a></li>
+                <li class="dropdown">
+                  <a href="program" class="dropbtn">PROGRAM</a>
+                  <ul class="dropdown-content">
+                    <li><a href="zumbaa">Zumbba</a></li>
+                    <li><a href="cardio">Cardio</a></li>
+                    <li><a href="gym">GYM</a></li>
+                    <li><a href="yoga">Yoga</a></li>
+                    <li><a href="cali">Calisthenic</a></li>
+                    <li><a href="swim">Swimming</a></li>
+                  </ul>
+                </li>
+                <li class="link"><a href="bmi">BMI</a></li>
+                <li class="link"><a href="blog">BLOGS</a></li>
+              
+                <% if (user) { %>
+                  <li class="link"><a href="#">Welcome, <%= user.username %></a></li>
+                <% } else { %>
+                  <li class="link"><a href="auth">LOGIN</a></li>
+                  <li class="link"><a href="auth">SIGN UP</a></li>
+                <% } %>
+              
+                <li class="link"><button class="btn">CONTACT US</button></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section__container yoga__container">
+            <h1 class="section__header">Yoga at FIT-TRACK</h1>
+            <p class="section__description">
+                Discover inner peace and physical well-being through our diverse yoga classes. Our experienced instructors will guide you through a journey of mindfulness, flexibility, and strength-building practices.
+            </p>
+
+            <div class="yoga-types">
+                <h2>Types of Yoga Classes</h2>
+                <p>At FIT-TRACK, we offer various yoga styles to cater to different needs and preferences:</p>
+                <ul>
+                    <li><strong>Hatha Yoga:</strong> A gentle, classic yoga style focusing on postures and breathing.</li>
+                    <li><strong>Vinyasa Flow:</strong> A dynamic practice linking breath with movement.</li>
+                    <li><strong>Yin Yoga:</strong> A slow-paced style with poses held for longer periods.</li>
+                    <li><strong>Power Yoga:</strong> A vigorous, fitness-based approach to yoga.</li>
+                    <li><strong>Restorative Yoga:</strong> A relaxing practice using props to support the body.</li>
+                </ul>
+            </div>
+
+            <div class="yoga-benefits">
+                <h2>Benefits of Yoga</h2>
+                <ul>
+                    <li>Improves flexibility and balance</li>
+                    <li>Builds strength and muscle tone</li>
+                    <li>Reduces stress and promotes relaxation</li>
+                    <li>Enhances mental clarity and focus</li>
+                    <li>Improves posture and body awareness</li>
+                    <li>Boosts overall well-being and energy levels</li>
+                </ul>
+            </div>
+
+            <div class="yoga-poses">
+                <h2>Basic Yoga Poses</h2>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/pic1.jpg" alt="Mountain Pose">
+                    
+                        <div class="pose-description">
+                            <h3>1. Mountain Pose (Tadasana)</h3>
+                            <h4>How to do it:</h4>
+                            <p>
+                                1. Stand with feet together and arms by your sides.<br>
+                                2. Press your feet into the ground and lift your chest up.<br>
+                                3. Reach the crown of your head toward the ceiling and relax your shoulders.<br>
+                                4. Keep the spine aligned and breathe deeply.
+                            </p>
+                        
+                            <h4>Benefits:</h4>
+                            <p>Improves posture, strengthens legs, and promotes balance and calmness.</p>
+                        </div>
+                        
+                </div>
+
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/adho mukha.jpg" alt="Downward Facing Dog">
+                    <div class="pose-description">
+                        <h3>2. Downward Facing Dog (Adho Mukha Svanasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Start on your hands and knees in a tabletop position.<br>
+                            2. Lift your hips towards the ceiling, straightening your legs.<br>
+                            3. Press your hands into the mat and keep your head between your arms.<br>
+                            4. Push your heels toward the ground (they may not touch initially).
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Stretches the hamstrings, calves, and shoulders; strengthens arms and legs; improves circulation.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/balasana.jpg" alt="Child's Pose">
+                    <div class="pose-description">
+                        <h3>3. Child's Pose (Balasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Kneel on the floor with your big toes touching and knees apart.<br>
+                            2. Sit back on your heels and extend your arms forward.<br>
+                            3. Rest your forehead on the mat and breathe deeply.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Stretches the back, calms the mind, relieves stress, and lengthens the spine.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/virabhadra 1.jpg" alt="Warrior I">
+                    <div class="pose-description">
+                        <h3>4. Warrior I (Virabhadrasana I)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Step one foot forward into a lunge and bend the front knee.<br>
+                            2. Keep the back leg straight with the heel on the ground.<br>
+                            3. Raise your arms overhead and face forward.<br>
+                            4. Hold for a few breaths, then switch sides.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens legs, opens hips, and improves focus and balance.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/virabhadra 2.jpg" alt="Warrior II">
+                    <div class="pose-description">
+                        <h3>5. Warrior II (Virabhadrasana II)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Step one foot forward, bending the knee.<br>
+                            2. Extend your arms parallel to the floor.<br>
+                            3. Turn your head to look over your front hand.<br>
+                            4. Keep your back leg straight and grounded.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens the legs, opens the hips, improves balance and concentration.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/trikonasana.jpg" alt="Triangle Pose">
+                    <div class="pose-description">
+                        <h3>6. Triangle Pose (Trikonasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Stand with your feet wide apart.<br>
+                            2. Turn one foot out 90 degrees and extend your arms at shoulder height.<br>
+                            3. Reach forward with the front hand and lower it to your shin or the floor.<br>
+                            4. Extend the opposite arm upward and look at your raised hand.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Stretches legs, hips, and torso; strengthens the legs; improves digestion.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/setu bandhasana.jpg" alt="Bridge Pose">
+                    <div class="pose-description">
+                        <h3>7. Bridge Pose (Setu Bandhasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Lie on your back with knees bent and feet flat on the floor.<br>
+                            2. Place your arms by your sides and press into your feet to lift your hips.<br>
+                            3. Roll your shoulders underneath you and clasp your hands beneath your body.<br>
+                            4. Hold for a few breaths, then lower slowly.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens the back, glutes, and hamstrings; opens the chest and shoulders.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/marjaryasana-bitilasana.jpg" alt="Cat-Cow Pose">
+                    <div class="pose-description">
+                        <h3>8. Cat-Cow Pose (Marjaryasana-Bitilasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Begin on all fours in a tabletop position.<br>
+                            2. On an inhale, arch your back (cow pose) and lift your head and tailbone.<br>
+                            3. On an exhale, round your back (cat pose) and tuck your chin toward your chest.<br>
+                            4. Repeat the flow with your breath.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Improves flexibility of the spine, massages internal organs, and relieves stress.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/bhujangasana.jpg" alt="Cobra Pose">
+                    <div class="pose-description">
+                        <h3>9. Cobra Pose (Bhujangasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Lie on your stomach with your hands under your shoulders.<br>
+                            2. Press into your palms to lift your chest, keeping elbows slightly bent.<br>
+                            3. Engage your back muscles and keep your legs on the floor.<br>
+                            4. Hold and breathe, then release back down.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Strengthens the spine, opens the chest, and relieves fatigue.</p>
+                    </div>
+                </div>
+                
+                <div class="yoga-pose">
+                    <img src="/image/assets/yoga/paschimottanasana.jpg" alt="Seated Forward Bend">
+                    <div class="pose-description">
+                        <h3>10. Seated Forward Bend (Paschimottanasana)</h3>
+                        <h4>How to do it:</h4>
+                        <p>
+                            1. Sit with legs extended in front of you.<br>
+                            2. Inhale and lengthen your spine, then exhale and fold forward over your legs.<br>
+                            3. Reach for your feet or shins, and relax your head toward your knees.<br>
+                            4. Hold and breathe deeply.
+                        </p>
+                        <h4>Benefits:</h4>
+                        <p>Stretches the spine, hamstrings, and lower back; calms the mind.</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+                </div>
+                <p>
+                    Embark on a journey of self-discovery and wellness with our yoga classes. Find balance, strength, and inner peace on and off the mat.
+                </p>
+                <div class="footer__socials">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Company</h4>
+                <div class="footer__links">
+                    <a href="#">Business</a>
+                    <a href="#">Franchise</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Network</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>About Us</h4>
+                <div class="footer__links">
+                    <a href="#">Blogs</a>
+                    <a href="#">Security</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <div class="footer__links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">BMI Calculator</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 MaharshiAndTems. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="/script/main.js"></script>
+</body>
+</html>

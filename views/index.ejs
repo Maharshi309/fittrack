@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    
+    <title>Responsive Gym Website</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#"><img src="/image/assets/logo.png" alt="logo" />FIT-TRACK</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="#home">HOME</a></li>
+          <li class="link"><a href="#about">ABOUT US</a></li>
+          <li class="dropdown">
+            <a href="#program" class="dropbtn">PROGRAM</a>
+            <ul class="dropdown-content">
+              <li><a href="zumba">Zumbba</a></li>
+              <li><a href="cardio">Cardio</a></li>
+              <li><a href="gym">GYM</a></li>
+              <li><a href="yoga">Yoga</a></li>
+              <li><a href="calisthenics">Calisthenic</a></li>
+              <li><a href="swim">Swimming</a></li>
+            </ul>
+          </li>
+          <li class="link"><a href="bmi">BMI</a></li>
+          <li class="link"><a href="blog">BLOGS</a></li>
+        
+          <% if (user) { %>
+            <li class="link"><a href="#">Welcome, <%= user.username %></a></li>
+          <% } else { %>
+            <li class="link"><a href="auth">LOGIN</a></li>
+            <li class="link"><a href="auth">SIGN UP</a></li>
+          <% } %>
+        
+          <li class="link"><button class="btn">CONTACT US</button></li>
+        </ul>
+      </nav>
+
+      <div class="section__container header__container" id="home">
+        <div class="header__image">
+          <img src="/image/assets/header.png" alt="header" />
+        </div>
+        <div class="header__content">
+          <h4>Build Yourself &</h4>
+          <h1 class="section__header">Shape Yourself!</h1>
+          <p>
+            Embrace the commitment to your health and well-being;
+            with each day's dedication, you sculpt not only your body
+            but also a mindset of discipline and self-love.
+          </p>
+          <div class="header__btn">
+            <button class="btn">Join Today</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="/image/assets/about.png" alt="About Us" />
+      </div>
+      <div class="about__content">
+        <h2 class="section__header">About Us</h2>
+        <p class="section__description">
+          Welcome to our premier gym website, where fitness meets innovation. Explore our state-of-the-art facilities and diverse range of fitness classes tailored to all levels. With expert trainers and personalized workout plans, we're committed to helping you reach your goals. Join our supportive community and unlock a healthier lifestyle today. Experience the difference at our gym - your journey to wellness starts here!
+        </p>
+
+        <p class="section__description">
+          Join the FlexFit community within our gym, and experience a supportive network of individuals striving for excellence. Benefit from the collective energy and motivation that comes with being part of a fitness family dedicated to success. Your commitment to a healthier lifestyle is met with our commitment to providing you with the tools and support needed to thrive.
+        </p>
+
+        <p class="section__description">
+          FlexFit? It's not just about exercise; it's about holistic fitness. Our comprehensive programs, including dance and cardio, are crafted to not only help you achieve your fitness goals but also make the journey enjoyable. With FlexFit, you're not just joining a workout; you're embracing a lifestyle that prioritizes your physical health, mental well-being, and personal growth. Elevate your fitness experience with FlexFit - where innovation meets individuality, and every step forward is a celebration of your well-being.
+        </p>
+      </div>
+    </section>
+
+    <section class="section__container program" id="program">
+      <h2 class="section__header">Our Programs</h2>
+      <p class="section__description">
+        Discover a diverse range of exhilarating programs at our gym designed to cater to all fitness levels and interests. Whether you're a seasoned athlete or just starting your fitness journey, our programs offer something for everyone.
+      </p>
+      <div class="ourProgram">
+        <div class="crd">
+          <a href="zumbba.html">
+            <img src="/image/assets/dance.webp" alt="Zumbba" style="border: none;" />
+          </a>
+          <h3><a href="zumbba.html" style="text-decoration: none; color: inherit;">Zumbba</a></h3>
+        </div>
+        <div class="crd">
+          <a href="cardio.html">
+            <img src="/image/assets/cardio.webp" alt="Cardio" style="border: none;" />
+          </a>
+          <h3><a href="cardio.html" style="text-decoration: none; color: inherit;">Cardio</a></h3>
+        </div>
+        <div class="crd">
+          <a href="gym.html">
+            <img src="/image/assets/heavy.webp" alt="GYM" style="border: none;" />
+          </a>
+          <h3><a href="gym.html" style="text-decoration: none; color: inherit;">GYM</a></h3>
+        </div>
+        <div class="crd">
+          <a href="yoga.html">
+            <img src="/image/assets/yoga_1.png" alt="Yoga" style="border: none;" />
+          </a>
+          <h3><a href="yoga.html" style="text-decoration: none; color: inherit;">Yoga</a></h3>
+        </div>
+        <div class="crd">
+          <a href="calisthenic.html">
+            <img src="/image/assets/calisthenics_1.png" alt="Calisthenic" style="border: none;" />
+          </a>
+          <h3><a href="calisthenic.html" style="text-decoration: none; color: inherit;">Calisthenic</a></h3>
+        </div>
+        <div class="crd">
+          <a href="mma.html">
+            <img src="/image/assets/MMA.jpg" alt="MMA" style="border: none;" />
+          </a>
+          <h3><a href="mma.html" style="text-decoration: none; color: inherit;">MMA</a></h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container" id="client">
+      <h2 class="section__header">What People Says About Us?</h2>
+      <p class="section__description">
+        These testimonials serve as a testament to our commitment to helping individuals achieve their fitness goals, and fostering a supportive environment for everyone who walks through our doors.
+      </p>
+      <div class="client__card">
+        <img src="/image/assets/utkarsh.jpg" width="40" height="100" alt="client" />
+        <div class="client__ratings">
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-line"></i></span>
+        </div>
+        <p>
+          Joining FlexFit has truly transformed my approach to fitness. From the cutting-edge equipment to the motivating atmosphere, every workout session becomes a step towards a healthier and stronger version of myself. The dedicated staff at FlexFit ensures that every visit is not just a workout, but a positive and uplifting experience.
+        </p>
+        <h4>Utkarsh Jindal</h4>
+        <h5>Marketing Manager</h5>
+      </div>
+
+      <div class="client__card">
+        <img src="/image/assets/janhvi.jpg" width="40" height="120" alt="client" />
+        <div class="client__ratings">
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-fill"></i></span>
+          <span><i class="ri-star-line"></i></span>
+        </div>
+        <p>
+          FlexFit has become my go-to fitness destination. The wide range of programs they offer has allowed me to explore different aspects of fitness, from yoga to weight training. The trainers are incredibly knowledgeable and supportive, and I feel stronger both physically and mentally after every session. Highly recommend it to anyone looking to invest in their health and fitness!
+        </p>
+        <h4>Janhvi Malhotra</h4>
+        <h5>Entrepreneur</h5>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__info">
+          <h3>FIT-TRACK</h3>
+          <p>
+            Join the fitness revolution today with FlexFit, your dedicated fitness partner for a healthier, stronger you.
+          </p>
+          <div class="footer__socials">
+            <a href="https://facebook.com" target="_blank"><i class="ri-facebook-box-line"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="ri-twitter-line"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="ri-linkedin-line"></i></a>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#program">Programs</a></li>
+            <li><a href="#client">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

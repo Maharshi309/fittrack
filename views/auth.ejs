@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+    <title>Auth - FIT-TRACK</title>
+    <style>
+        .social-auth {
+            display: flex;
+            justify-content: center; /* Center the buttons */
+            gap: 10px;
+            margin-bottom: 20px; /* Space between social buttons and form button */
+        }
+        .btn-google, .btn-facebook {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border: none;
+            padding: 10px 20px; /* Increased padding for better appearance */
+            border-radius: 5px;
+            font-size: 1rem; /* Slightly larger font size */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+        }
+        .btn-google {
+            background-color: #4285F4; /* Google Blue */
+        }
+        .btn-facebook {
+            background-color: #3b5998; /* Facebook Blue */
+        }
+        .btn-google:hover {
+            background-color: #357ae8; /* Darker shade for hover effect */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .btn-facebook:hover {
+            background-color: #2d4373; /* Darker shade for hover effect */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .btn-google i, .btn-facebook i {
+            margin-right: 8px; /* Space between icon and text */
+            font-size: 1.2rem; /* Increase icon size */
+        }
+        .form-container {
+            display: none; /* Hide both forms initially */
+        }
+        .active {
+            display: block; /* Show the active form */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo" style="display: flex; justify-content: center; width: 100%;">
+            <a href="/" style="display: flex; align-items: center;">
+              <img src="/image/assets/logo.png" alt="logo" />
+              <span>FIT-TRACK</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section__container">
+        <div class="auth-form">
+            <!-- Login Form -->
+            <div id="loginForm" class="form-container active">
+                <form action="/auth/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <div class="social-auth">
+                        <button class="btn btn-google" onclick="loginWithGoogle()">
+                            <i class="ri-google-fill"></i> Google
+                        </button>
+                        <button class="btn btn-facebook" onclick="loginWithFacebook()">
+                            <i class="ri-facebook-fill"></i> Facebook
+                        </button>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p class="auth-switch">Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signupForm" class="form-container">
+                <form  action="/auth/register" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="signupName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="signupEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="signupPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="social-auth">
+                        <button class="btn btn-google" onclick="signUpWithGoogle()">
+                            <i class="ri-google-fill"></i> Google
+                        </button>
+                        <button class="btn btn-facebook" onclick="signUpWithFacebook()">
+                            <i class="ri-facebook-fill"></i> Facebook
+                        </button>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script/main.js"></script>
+    <!-- <script src="auth.js"></script> -->
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            loginForm.classList.toggle('active');
+            signupForm.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
