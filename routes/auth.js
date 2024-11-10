@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
+
+
 // Route for registering a new user
 router.post('/register', async (req, res) => {
     try {
